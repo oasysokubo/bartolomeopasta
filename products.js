@@ -18,10 +18,11 @@ let json_data = {
 
     "fb-003": {
         "type": "special-package",
-        "status": "New",
+        "status": "Special",
         "src": "faciolla-brothers/images/IMG_9190.jpg",
         "name": "Pancellote",
-        "price": 55
+        "price": 55,
+        "link": "products/special_package.html"
     },
 
 
@@ -112,7 +113,7 @@ for (const i of Object.keys(json_data)) {
     
 
     d_ += `
-
+        <a href="` + json_data[i]["link"] +`">
         <div class="col-lg-3 col-md-6 special-grid ` + json_data[i]["type"] + `">
             <div class="products-single fix">
                 <div class="box-img-hover">
@@ -132,6 +133,7 @@ for (const i of Object.keys(json_data)) {
                 </div>
             </div>
         </div>
+        </a>
 
     `;
 }
