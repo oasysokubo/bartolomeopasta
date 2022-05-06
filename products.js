@@ -42,14 +42,6 @@ let json_data = {
         "price": 55
     },
 
-    "fb-006": {
-        "type": "pasta",
-        "status": "New",
-        "src": "faciolla-brothers/images/IMG_9183.jpg",
-        "name": "Pancellote",
-        "price": 55
-    },
-
     "fb-007": {
         "type": "pasta",
         "status": "New",
@@ -62,11 +54,12 @@ let json_data = {
         "type": "pasta",
         "status": "New",
         "src": "faciolla-brothers/images/IMG_9187.jpg",
-        "name": "Pancellote",
-        "price": 55
+        "name": "Orecchiette",
+        "price": 55,
+        "link": "products/orecchiette.html"
     },
     
-    "fb-006": {
+    "fb-009": {
         "type": "pasta",
         "status": "New",
         "src": "faciolla-brothers/images/IMG_9188.jpg",
@@ -78,6 +71,8 @@ let json_data = {
 
 let d_ = "";
 for (const i of Object.keys(json_data)) {
+
+    console.log(i);
 
     var d__ = "";
 
