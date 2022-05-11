@@ -461,8 +461,8 @@
                           <span>Types</span>
                    
                           <div class="cable-choose">
-                            <button id="type1" onClick="type_select(this.id)" autofocus>Spinach</button>
-                            <button id="type2" onClick="type_select(this.id)">Lemon</button>
+                            <button id="fb-008" onClick="type_select(this.id)" autofocus>Spinach</button>
+                            <button id="fb-008-1-hide" onClick="type_select(this.id)">Lemon</button>
                           </div>
                    
                           <a href="#">How to configurate your headphones</a>
@@ -474,38 +474,33 @@
                         <span>148$</span>
                         <a class="cart-btn" onclick="addCart();">Add to cart</a>
                       </div>
+
+                      <form id="form" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="encrypted" value="">
+                      </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js';></script>
     <script>
-        let selected_type = "Spinach";
 
-        $(document).ready(function() {
- 
-            $('.color-choose input').on('click', function() {
-                var headphonesColor = $(this).attr('data-image');
+        let data = {};
+        let selected_type = "fb-008";
+        let selected_attr = null;
 
-                $('.active').removeClass('active');
-                $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
-                $(this).addClass('active');
-            });
+        $.getJSON("products.json", function(json) {
+            data = json; // this will show the info it in firebug console
+        }).then(function() {
+          console.log(data);
+
+          
         });
 
-        const change = src => {
-            document.getElementById('main').src = src
-        }
-
         function type_select(id) {
-          console.log(id);
-          // document.getElementById(id).style.border = "2px solid #E1E8EE";
-          if (id == "type1") {
-            selected_type = "Spinach";
-          } else {
-            selected_type = "Lemon";
-          }
+          selected_type = id;
         };
 
         $('.product-price button').on('click', function() {
@@ -514,6 +509,17 @@
 
         const addCart = src => {
           console.log("Adding " + selected_type + " to cart.");
+
+          var form = document.getElementById("form");
+          
+          var Myelement = document.forms['form']['encrypted'];
+          let new_val = data[selected_type]['paypal_attr']
+          Myelement.setAttribute('value',new_val);
+          form.submit();
+        }
+
+        const change = src => {
+            document.getElementById('main').src = src
         }
 
     </script>
