@@ -92,7 +92,7 @@ $.getJSON("products/products.json", function(json) {
                       <div class="type-lb">
                           <p class="new">` + json_data[i]["status"] + `</p>
                       </div>
-                      <img src="` + json_data[i]["src"] + `" class="img-fluid" alt="Image">
+                      <img src="` + json_data[i]["src"][0] + `" class="img-fluid" alt="Image">
                       
                           
                           
