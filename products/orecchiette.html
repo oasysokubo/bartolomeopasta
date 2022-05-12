@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Faciolla Brothers</title>
+    <title>Faciolla Brothers - Orecchiette</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -37,263 +37,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        /* Basic Styling */
-/* html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-} */
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-  display: flex;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-  display: flex;
-}
-
-/* Columns */
-.left-column {
-  width: 65%;
-  position: relative;
-}
-
-.right-column {
-  width: 35%;
-  margin-top: 60px;
-}
-
-
-/* Left Column */
-.left-column img {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.left-column img.active {
-  opacity: 1;
-}
-
-
-/* Right Column */
-
-/* Product Description */
-.product-description {
-  border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
-}
-.product-description span {
-  font-size: 12px;
-  color: #358ED7;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.product-description h1 {
-  font-weight: 300;
-  font-size: 52px;
-  color: #43484D;
-  letter-spacing: -2px;
-}
-.product-description p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #86939E;
-  line-height: 24px;
-}
-
-/* Product Configuration */
-.product-color span,
-.cable-config span {
-  font-size: 14px;
-  font-weight: 400;
-  color: #86939E;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-/* Product Color */
-.product-color {
-  margin-bottom: 30px;
-}
-
-.color-choose div {
-  display: inline-block;
-}
-
-.color-choose input[type="radio"] {
-  display: none;
-}
-
-.color-choose input[type="radio"] + label span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: -1px 4px 0 0;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.color-choose input[type="radio"] + label span {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
-}
-
-.color-choose input[type="radio"]#red + label span {
-  background-color: #C91524;
-}
-.color-choose input[type="radio"]#blue + label span {
-  background-color: #314780;
-}
-.color-choose input[type="radio"]#black + label span {
-  background-color: #323232;
-}
-
-.color-choose input[type="radio"]:checked + label span {
-  background-image: url(images/check-icn.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Cable Configuration */
-.cable-choose {
-  margin-bottom: 20px;
-}
-
-.cable-choose button {
-  border: 2px solid #E1E8EE;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  color: #5E6977;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all .5s;
-}
-
-.cable-choose button:hover,
-.cable-choose button:active,
-.cable-choose button:focus {
-  border: 2px solid #86939E;
-  outline: none;
-}
-
-.cable-config {
-  border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
-}
-
-.cable-config a {
-  color: #358ED7;
-  text-decoration: none;
-  font-size: 12px;
-  position: relative;
-  margin: 10px 0;
-  display: inline-block;
-}
-.cable-config a:before {
-  content: "?";
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: 2px solid rgba(53, 142, 215, 0.5);
-  display: inline-block;
-  text-align: center;
-  line-height: 16px;
-  opacity: 0.5;
-  margin-right: 5px;
-}
-
-/* Product Price */
-.product-price {
-  display: flex;
-  align-items: center;
-}
-
-.product-price span {
-  font-size: 26px;
-  font-weight: 300;
-  color: #43474D;
-  margin-right: 20px;
-}
-
-.cart-btn {
-  display: inline-block;
-  background-color: #7DC855;
-  border-radius: 6px;
-  font-size: 16px;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 12px 30px;
-  transition: all .5s;
-}
-.cart-btn:hover {
-  background-color: #64af3d;
-}
-
-/* Responsive */
-@media (max-width: 940px) {
-  .container {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .left-column,
-  .right-column {
-    width: 100%;
-  }
-
-  .left-column img {
-    width: 300px;
-    right: 0;
-    top: -65px;
-    left: initial;
-  }
-}
-
-@media (max-width: 535px) {
-  .left-column img {
-    width: 220px;
-    top: -85px;
-  }
-}
-
-.main_view{
-        width: 100%;
-        height: 25rem;
-    }
-    .main_view img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .side_view{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .side_view img{
-        width: 9rem;
-        height: 6rem;
-        object-fit: cover;
-        cursor: pointer;
-        margin:0.5rem;
-    }
-
-
-    </style>
+    <link rel="stylesheet" href="../css/products.css">
 
 </head>
 
@@ -411,18 +155,9 @@
                     <!-- <img data-image="black" src="../faciolla-brothers/images/IMG_9190.jpg" alt="">
                     <img data-image="blue" src="../faciolla-brothers/images/IMG_9191.jpg" alt="">
                     <img data-image="red" class="active" src="../faciolla-brothers/images/IMG_9190.jpg" alt=""> -->
-                    <div class="banner-frame"> 
+                    <div class="banner-frame" id="banner_frame"> 
                         <!-- <img class="img-fluid" src="../faciolla-brothers/images/IMG_9190.jpg" alt="" /> -->
-                        <div class="main_view">
-                            <img src="../faciolla-brothers/images/IMG_9187.jpg" id="main" alt="IMAGE">
-                        </div>
-                 
-                        <!-- All images with side view -->
-                        <div class="side_view">
-                            <img src="../faciolla-brothers/images/IMG_9187.jpg" onclick="change(this.src)">
-                            <img src="../faciolla-brothers/images/IMG_9183.jpg" onclick="change(this.src)">
                         
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -484,18 +219,44 @@
         </div>
     </div>
 
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js';></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
 
         let data = {};
-        let selected_type = "fb-008";
+        let selections = ["fb-008", "fb-008-1-hide"];
+        let selected_type = selections[0];
         let selected_attr = null;
+        let main_dir = "../";
 
         $.getJSON("products.json", function(json) {
             data = json; // this will show the info it in firebug console
         }).then(function() {
           console.log(data);
 
+          // fill pictures
+
+          let small_img = "";
+          for (var i = 0; i < selections.length; i++) {
+            let selections_ = data[selections[i]]["src"];
+            for (var j = 0; j < selections_.length; j++) {
+              small_img += `<img src="` + main_dir + data[selections[i]]["src"][j] + `" onclick="change(this.src)">`;
+            }
+          }
+
+          let banner = `
+            <div class="main_view">
+                <img src="` + main_dir + data[selections[0]]["src"][0] + `" id="main" alt="IMAGE">
+            </div>
+      
+            <!-- All images with side view -->
+            <div class="side_view">
+            ` + 
+            small_img
+            + `
+            </div>
+          `;
+
+          document.getElementById("banner_frame").innerHTML = banner;
           
         });
 

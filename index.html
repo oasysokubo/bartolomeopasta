@@ -95,7 +95,7 @@ div.desc {
                             </ul>
                         </li> -->
                         <!-- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                         <!-- <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge" id="shopping-cart-count"></span></a></li> -->
                         <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
                             <input type="hidden" name="cmd" value="_s-xclick">
@@ -418,14 +418,46 @@ div.desc {
 		</div>
 	</div> -->
 
+    <div class="featured-box" id="featured-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Featured Products</h1>
+                        <!-- <img src="faciolla-brothers/images/IMG_9190.jpg" alt="Image" style="width: 40%;"> -->
+                        <!-- <a href="">
+                            <div class="col-lg-12" style="width: 40%;margin: auto;">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <div class="type-lb">
+                                            <p class="new">New</p>
+                                        </div>
+                                        <img src="faciolla-brothers/images/IMG_9190.jpg" class="img-fluid" alt="Image">
+                                    </div>
+                                    <div class="why-text">
+                                        <h4>Special Package - Choice of Pasta with Sauce and Olive Oil</h4>
+                                        <h5>$32</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row special-list" id="special-list"></div>
+                       
+        </div>
+    </div>
+
     <!-- Start Products  -->
-    <div class="products-box" id="products">
+    <!-- <div class="products-box" id="products">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
                         <h1>Products</h1>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p> -->
+                        
                     </div>
                 </div>
             </div>
@@ -447,7 +479,7 @@ div.desc {
                 
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Products  -->
 
     <!-- Start Blog  -->
@@ -720,9 +752,11 @@ div.desc {
     </div> -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2021 <a href="#">Facciolla Brothers</a></p>
-    </div>
+    </div> -->
+
+    
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
@@ -855,7 +889,79 @@ div.desc {
     </script>
 
     <!-- <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script> -->
-    <script src="products.js"></script>
+    <!-- <script src="products.js"></script> -->
+    <script>
+        let json_data = {};
+        $.getJSON("products/products.json", function(json) {
+            json_data = json; // this will show the info it in firebug console
+        }).then(function() {
+        let d_ = "";
+        for (const i of Object.keys(json_data)) {
+        
+            console.log(i);
+        
+            var d__ = "";
+                console.log(i.toLowerCase().indexOf("hide"));
+            if (i.toLowerCase().indexOf("hide") != -1) {
+                //don't do anything
+                console.log("Hide");
+            } else if (json_data[i]["status"] == "Sold Out") {
+                d_ += `
+                        <div class="col-lg-3 col-md-6 special-grid">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <div class="type-lb">
+                                        <p class="new">` + json_data[i]["status"] + `</p>
+                                    </div>
+                                    <img src="` + json_data[i]["src"][0] + `" class="img-fluid" alt="Image">
+                                </div>
+                                <div class="why-text">
+                                    <h4>` + json_data[i]["name"] + `</h4>
+                                    <h5>$` + json_data[i]["price"] + `</h5>
+                                </div>
+                            </div>
+                        </div>
+                `;
+            } else {
+                 // style="width: 40%;margin: auto;"
+                //<div class="row"></div>    
+                //<a href="` + json_data[i]["link"] +`"> </a>
+                d_ += `
+                
+                    
+                        <div class="col-lg-3 col-md-6 special-grid" onclick="location.href='` + json_data[i]["link"] + `';" style="cursor:pointer;">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <div class="type-lb">
+                                        <p class="new">` + json_data[i]["status"] + `</p>
+                                    </div>
+                                    <img src="` + json_data[i]["src"][0] + `" class="img-fluid" alt="Image">
+                                </div>
+                                <div class="why-text">
+                                    <h4>` + json_data[i]["name"] + `</h4>
+                                    <h5>$` + json_data[i]["price"] + `</h5>
+                                </div>
+                            </div>
+                        </div>
+                   
+                
+        
+            `;
+            }
+        }
+        
+        // <ul>
+        //     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+        //     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+        //     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+        // </ul>
+        
+        //<a class="cart" onclick="SaveItem('` + i  + `', '1')">Add to Cart</a>
+        
+        
+        document.getElementById("special-list").innerHTML = d_;
+        });
+    </script>
     
 
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Faciolla Brothers</title>
+    <title>Faciolla Brothers - Orecchiette</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -37,263 +37,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        /* Basic Styling */
-/* html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-} */
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-  display: flex;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-  display: flex;
-}
-
-/* Columns */
-.left-column {
-  width: 65%;
-  position: relative;
-}
-
-.right-column {
-  width: 35%;
-  margin-top: 60px;
-}
-
-
-/* Left Column */
-.left-column img {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.left-column img.active {
-  opacity: 1;
-}
-
-
-/* Right Column */
-
-/* Product Description */
-.product-description {
-  border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
-}
-.product-description span {
-  font-size: 12px;
-  color: #358ED7;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.product-description h1 {
-  font-weight: 300;
-  font-size: 52px;
-  color: #43484D;
-  letter-spacing: -2px;
-}
-.product-description p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #86939E;
-  line-height: 24px;
-}
-
-/* Product Configuration */
-.product-color span,
-.cable-config span {
-  font-size: 14px;
-  font-weight: 400;
-  color: #86939E;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-/* Product Color */
-.product-color {
-  margin-bottom: 30px;
-}
-
-.color-choose div {
-  display: inline-block;
-}
-
-.color-choose input[type="radio"] {
-  display: none;
-}
-
-.color-choose input[type="radio"] + label span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: -1px 4px 0 0;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.color-choose input[type="radio"] + label span {
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
-}
-
-.color-choose input[type="radio"]#red + label span {
-  background-color: #C91524;
-}
-.color-choose input[type="radio"]#blue + label span {
-  background-color: #314780;
-}
-.color-choose input[type="radio"]#black + label span {
-  background-color: #323232;
-}
-
-.color-choose input[type="radio"]:checked + label span {
-  background-image: url(images/check-icn.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Cable Configuration */
-.cable-choose {
-  margin-bottom: 20px;
-}
-
-.cable-choose button {
-  border: 2px solid #E1E8EE;
-  border-radius: 6px;
-  padding: 13px 20px;
-  font-size: 14px;
-  color: #5E6977;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all .5s;
-}
-
-.cable-choose button:hover,
-.cable-choose button:active,
-.cable-choose button:focus {
-  border: 2px solid #86939E;
-  outline: none;
-}
-
-.cable-config {
-  border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
-}
-
-.cable-config a {
-  color: #358ED7;
-  text-decoration: none;
-  font-size: 12px;
-  position: relative;
-  margin: 10px 0;
-  display: inline-block;
-}
-.cable-config a:before {
-  content: "?";
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: 2px solid rgba(53, 142, 215, 0.5);
-  display: inline-block;
-  text-align: center;
-  line-height: 16px;
-  opacity: 0.5;
-  margin-right: 5px;
-}
-
-/* Product Price */
-.product-price {
-  display: flex;
-  align-items: center;
-}
-
-.product-price span {
-  font-size: 26px;
-  font-weight: 300;
-  color: #43474D;
-  margin-right: 20px;
-}
-
-.cart-btn {
-  display: inline-block;
-  background-color: #7DC855;
-  border-radius: 6px;
-  font-size: 16px;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 12px 30px;
-  transition: all .5s;
-}
-.cart-btn:hover {
-  background-color: #64af3d;
-}
-
-/* Responsive */
-@media (max-width: 940px) {
-  .container {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .left-column,
-  .right-column {
-    width: 100%;
-  }
-
-  .left-column img {
-    width: 300px;
-    right: 0;
-    top: -65px;
-    left: initial;
-  }
-}
-
-@media (max-width: 535px) {
-  .left-column img {
-    width: 220px;
-    top: -85px;
-  }
-}
-
-.main_view{
-        width: 80%;
-        height: 25rem;
-    }
-    .main_view img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .side_view{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .side_view img{
-        width: 9rem;
-        height: 7rem;
-        object-fit: cover;
-        cursor: pointer;
-        margin:0.5rem;
-    }
-
-
-    </style>
+    <link rel="stylesheet" href="../css/products.css">
 
 </head>
 
@@ -319,6 +63,12 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html/#about-us">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="../index.html/#products">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="../index.html/#contact-us">Contact Us</a></li>
+                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                          <input type="hidden" name="cmd" value="_s-xclick">
+                          <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin-top: 13px;">
+                          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                      </form>
                                                         
                     </ul>
                 </div>
@@ -398,39 +148,30 @@
         </div>
       </main> -->
 
-      <div class="about-box-main" id="about-us">
+    <div class="about-box-main" id="about-us">
         <div class="container">
             <div class="row">
 				<div class="col-lg-6">
                     <!-- <img data-image="black" src="../faciolla-brothers/images/IMG_9190.jpg" alt="">
                     <img data-image="blue" src="../faciolla-brothers/images/IMG_9191.jpg" alt="">
                     <img data-image="red" class="active" src="../faciolla-brothers/images/IMG_9190.jpg" alt=""> -->
-                    <div class="banner-frame"> 
+                    <div class="banner-frame" id="banner_frame"> 
                         <!-- <img class="img-fluid" src="../faciolla-brothers/images/IMG_9190.jpg" alt="" /> -->
-                        <div class="main_view">
-                            <img src="../faciolla-brothers/images/IMG_9190.jpg" id="main" alt="IMAGE">
-                        </div>
-                 
-                        <!-- All images with side view -->
-                        <div class="side_view">
-                            <img src="../faciolla-brothers/images/IMG_9190.jpg" onclick="change(this.src)">
-                            <img src="../faciolla-brothers/images/IMG_9191.jpg" onclick="change(this.src)">
                         
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="product-description">
-                        <span>Headphones</span>
-                        <h1>Beats EP</h1>
-                        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+                        <span>Pasta</span>
+                        <h1 id="product_name"></h1>
+                        <p id="product_description"></p>
                       </div>
                    
                       <!-- Product Configuration -->
                       <div class="product-configuration">
                    
                         <!-- Product Color -->
-                        <div class="product-color">
+                        <!-- <div class="product-color">
                           <span>Color</span>
                    
                           <div class="color-choose">
@@ -448,44 +189,121 @@
                             </div>
                           </div>
                    
-                        </div>
+                        </div> -->
                    
                         <!-- Cable Configuration -->
                         <div class="cable-config">
-                          <span>Cable configuration</span>
+                          <span>Types</span>
                    
-                          <div class="cable-choose">
-                            <button>Straight</button>
-                            <button>Coiled</button>
-                            <button>Long-coiled</button>
+                          <div class="cable-choose" id="cable_choose">
+                            
                           </div>
                    
-                          <a href="#">How to configurate your headphones</a>
+                          <a href="#pasta-info">What kind of pasta is best for me?</a>
                         </div>
                       </div>
                    
                       <!-- Product Pricing -->
                       <div class="product-price">
-                        <span>148$</span>
-                        <a href="#" class="cart-btn">Add to cart</a>
+                        <span id="product_price"></span>
+                        <a class="cart-btn" onclick="addCart();">Add to cart</a>
                       </div>
+
+                      <form id="form" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="encrypted" value="">
+                      </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
- 
-            $('.color-choose input').on('click', function() {
-                var headphonesColor = $(this).attr('data-image');
+    <div class="featured-box" id="featured-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Learn More About Special Package</h1>
 
-                $('.active').removeClass('active');
-                $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
-                $(this).addClass('active');
-            });
+    Orecchiette are a pasta typical of Apulia, a region of Southern Italy. Their name comes from their shape, which resembles a small ear.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script>
+
+        let data = {};
+        let selections = ["fb-003"];
+        let selected_type = selections[0];
+        let selected_attr = null;
+        let main_dir = "../";
+
+        $.getJSON("products.json", function(json) {
+            data = json; // this will show the info it in firebug console
+        }).then(function() {
+          console.log(data);
+
+          // fill pictures
+            let cable_choose = "";
+          let small_img = "";
+          for (var i = 0; i < selections.length; i++) {
+            let selections_ = data[selections[i]]["src"];
+            for (var j = 0; j < selections_.length; j++) {
+              small_img += `<img src="` + main_dir + data[selections[i]]["src"][j] + `" onclick="change(this.src)">`;
+            }
+
+
+            // Fill types
+            cable_choose += `
+            <button id="`+i+`" onClick="type_select(this.id)" autofocus>`+data[selections[i]]["product_type"]+`</button>
+            `;
+          }
+
+          document.getElementById("cable_choose").innerHTML = cable_choose;
+
+          let banner = `
+            <div class="main_view">
+                <img src="` + main_dir + data[selections[0]]["src"][0] + `" id="main" alt="IMAGE">
+            </div>
+      
+            <!-- All images with side view -->
+            <div class="side_view">
+            ` + 
+            small_img
+            + `
+            </div>
+          `;
+
+          document.getElementById("banner_frame").innerHTML = banner;
+
+          // set product infos
+          document.getElementById("product_name").innerHTML = data[selections[0]]["name"]
+          document.getElementById("product_description").innerHTML = data[selections[0]]["description"]
+          document.getElementById("product_price").innerHTML = "$" + data[selections[0]]["price"]
+          
         });
+
+        function type_select(id) {
+          selected_type = id;
+        };
+
+        $('.product-price button').on('click', function() {
+          $(this).addClass('active');
+        });
+
+        const addCart = src => {
+          console.log("Adding " + selected_type + " to cart.");
+
+          var form = document.getElementById("form");
+          
+          var Myelement = document.forms['form']['encrypted'];
+          let new_val = data[selected_type]['paypal_attr']
+          Myelement.setAttribute('value',new_val);
+          form.submit();
+        }
 
         const change = src => {
             document.getElementById('main').src = src
