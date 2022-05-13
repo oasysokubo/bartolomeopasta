@@ -8,7 +8,8 @@
         "price": 32,
         "link": "products/special_package.html",
         "meta": "1 set package",
-        "product_type": "Pappadelle"
+        "product_type": ["Pappadelle"],
+        "sauce_type": ["Arrabbiata"]
     },
 
 
@@ -25,7 +26,7 @@
         "type": "pasta",
         "status": "Sold Out",
         "src": ["faciolla-brothers/images/IMG_9184.jpg"],
-        "name": "Pancellote",
+        "name": "Garganelli",
         "price": 55
     },
 

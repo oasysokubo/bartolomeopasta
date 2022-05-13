@@ -46,7 +46,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.html"><img src="faciolla-brothers/imgs/fb_logo_resize.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="faciolla-brothers/imgs/fb_logo_resize.png" class="logo" style="filter: brightness(98%)" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -54,7 +54,8 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#featured-product">Products</a></li>
                         <!-- <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -68,8 +69,18 @@
                         </li> -->
                         <!-- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <!-- <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge" id="shopping-cart-count"></span></a></li> -->
+                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin-top: 13px;">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                            
+                            
                     </ul>
                 </div>
+                
                 <!-- /.navbar-collapse -->
 
                 <!-- Start Atribute Navigation -->
@@ -133,7 +144,7 @@
     <!-- End Top Search -->
 
     <!-- Start All Title Box -->
-    <div class="all-title-box">
+    <!-- <div class="all-title-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -145,7 +156,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End All Title Box -->
 
     <!-- Start Contact Us  -->
@@ -154,8 +165,8 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-12">
                     <div class="contact-form-right">
-                        <h2>GET IN TOUCH</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p>
+                        <h2>Get in touch</h2>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p> -->
                         <form id="contactForm">
                             <div class="row">
                                 <div class="col-md-12">
@@ -192,18 +203,15 @@
                     </div>
                 </div>
 				<div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
-                        <h2>CONTACT INFO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                    <div class="contact-info-left" >
+                        <h2>Contact Info</h2>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p> -->
                         <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 9000 <br>Preston Street Wichita,<br> KS 87213 </p>
-                            </li>
-                            <li>
+                            <!-- <li>
                                 <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                            </li>
+                            </li> -->
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:bartolomeopasta@gmail.com">bartolomeopasta@gmail.com</a></p>
                             </li>
                         </ul>
                     </div>
@@ -214,7 +222,7 @@
     <!-- End Cart -->
 
     <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+    <!-- <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
@@ -377,7 +385,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Instagram Feed  -->
 
 
@@ -416,6 +424,7 @@
 							<h3>Social Media</h3>
                             <p>Come find us on our social media pages!</p>
 							<ul>
+                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -433,10 +442,10 @@
     </footer>
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-    </div>
+    </div> -->
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

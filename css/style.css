@@ -2370,7 +2370,9 @@
 }
  .contact-info-left{
      padding: 20px;
-     background: url(../images/contact-bg.jpg) no-repeat center;
+     /* background: url(../images/contact-bg.jpg) no-repeat center; */
+     background-color: fff;
+     filter: brightness(98%);
 	 background-size: cover;
 }
  .contact-info-left h2{
