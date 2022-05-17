@@ -341,10 +341,11 @@ div.desc {
     <!-- <script src="products.js"></script> -->
     <script>
         let json_data = {};
+        let d_ = "";
         $.getJSON("products/products.json", function(json) {
             json_data = json; // this will show the info it in firebug console
         }).then(function() {
-        let d_ = "";
+        
         for (const i of Object.keys(json_data)) {
         
             console.log(i);
@@ -371,7 +372,7 @@ div.desc {
                             </div>
                         </div>
                 `;
-            } else if (json_data[i]["status"] == "Limited") {
+            } else if (json_data[i]["type"] == "pasta") {
 
                 d_ += `
                         <div class="col-lg-3 col-md-6 special-grid ` + json_data[i]["type"] + `">
@@ -427,7 +428,13 @@ div.desc {
         //<a class="cart" onclick="SaveItem('` + i  + `', '1')">Add to Cart</a>
         
         
-        document.getElementById("special-list").innerHTML = d_;
+        
+
+
+        }).then(function() {
+
+            document.getElementById("special-list").innerHTML = d_;
+        
         });
     </script>
     
